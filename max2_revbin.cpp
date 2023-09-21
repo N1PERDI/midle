@@ -1,11 +1,7 @@
 #include <iostream>
-#include "midle.h"
 using namespace std;
 int itc_second_max_num(long long number) {
-	if (number < 10) {
-		return -1;
-	}
-
+	if (number < 10) { return -1; }
 	int max1 = -1;
 	int max2 = -1;
 	while (number > 0) {
@@ -21,16 +17,13 @@ int itc_second_max_num(long long number) {
 
 		number /= 10;
 	}
-	return max2;
+	return max2; // right
 
 
 }
 int itc_second_simple_max_num(long long number) {
-	if (number < 10) {
-		return -1;
-	}
-
-	int max1 = -1;
+	if (number < 10) { return -1; }
+    int max1 = -1;
 	int max2 = -1;
 	while (number > 0) {
 		int max = number % 10;
@@ -48,10 +41,9 @@ int itc_second_simple_max_num(long long number) {
 	if (max1 == max2) { return -1; }
 	else { return max2; }
 }
+// right 
 long long itc_bin_num(long long number) {
-	if (number == 0) {
-		return 0;
-	}
+	if (number == 0) { return 0; }
 	long long b2 = 0;
 	long long p = 1;
 
@@ -64,22 +56,22 @@ long long itc_bin_num(long long number) {
 
 	return b2;
 }
+
 long long itc_oct_num(long long number) {
-	if (number == 0) {
-		return 0;
-	}
+	if (number == 0) { return 0; }
 
 	long long oct = 0;
 	long long p = 1;
 
 	while (number > 0) {
-		int d = number % 8;
+		int d = number % 8; // system nado
 		oct += d * p;
-		p *= 10;
-		number /= 8;
+		p *= 10; // sistem isch
+		number /= 8; // цифра
 	}
 
 	return oct;
+	// right
 }
 int itc_rev_bin_num(long long number) {
 	int d = 0;
@@ -94,3 +86,4 @@ int itc_rev_bin_num(long long number) {
 
 	return d;
 }
+// right 

@@ -1,8 +1,7 @@
 #include <iostream>
-#include "midle.h"
 using namespace std;
 void itc_num_print(int number) {
-	cout << number;
+	cout <<  number;
 }
 int itc_len_num(long long number) {
 	int sum = 0;
@@ -40,3 +39,4 @@ int itc_max_num(long long number) {
 	return sum;
 
 }
+// все верно 100%
