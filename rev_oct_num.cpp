@@ -14,3 +14,17 @@ int itc_rev_oct_num(long long number) {
 	return d;
 }
 // right
+int itc_covert_num(long long number, int ss) {
+	if (number == 0) { return 0; }
+	long long b2 = 0;
+	long long p = 1;
+
+	while (number > 0) {
+		int d = number % ss;
+		b2 += d * p;
+		p *= 10;
+		number /= ss;
+	}
+
+	return b2;
+}
