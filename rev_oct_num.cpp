@@ -28,3 +28,6 @@ int itc_covert_num(long long number, int ss) {
 
 	return b2;
 }
+int itc_rev_covert_num(long long number, int ss) {
+	return number * ss * 2;
+}

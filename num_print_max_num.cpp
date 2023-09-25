@@ -6,8 +6,9 @@ void itc_num_print(int number) {
 // +
 int itc_len_num(long long number) {
 	if (number < 0) { number *= -1; }
+	if (number == 0) {return 1;}
 	int sum = 0;
-	while (number > 0) {
+	while (number) {
 		number /= 10;
 		sum++;
 	}
@@ -55,16 +56,14 @@ long long itc_multi_num(long long number) {
 }
 // +
 int itc_max_num(long long number) {
-	int sum = 0, s = number;
-	if (number > 0) { s = number; }
-	else { s = number * -1; }
-	while (s > 0) {
-		number = s % 10;
-		if (sum < number) { sum = number; }
-		else { sum != number; }
-		s /= 10;
+	if (number < 0) { number *= -1; }
+	if (number == 0) { return 0; }
+	int smax = -1;
+	while (number > 0) {
+		int r = number % 10;
+		if (r > smax) { smax = r; }
+		number/= 10;
 	}
-	return sum;
-
+	return smax;
 }
 // все верно 100%

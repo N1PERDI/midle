@@ -16,3 +16,4 @@ long long itc_oct_num(long long number);
 int itc_rev_bin_num(long long number);
 int itc_rev_oct_num(long long number);
 int itc_covert_num(long long number, int ss);
+int itc_rev_covert_num(long long number, int ss);

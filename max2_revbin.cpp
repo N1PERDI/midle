@@ -2,7 +2,7 @@
 using namespace std;
 int itc_second_max_num(long long number) {
 	if (number < 0) { number *= -1; }
-	if (number < 10 && number > 0) { return -1; }
+	if (number < 10 && number >= 0) { return -1; }
 	int max1 = -1;
 	int max2 = -1;
 	while (number > 0) {
