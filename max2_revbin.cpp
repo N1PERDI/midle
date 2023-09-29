@@ -3,24 +3,30 @@ using namespace std;
 int itc_second_max_num(long long number) {
 	if (number < 0) { number *= -1; }
 	if (number < 10 && number >= 0) { return -1; }
-	int max1 = -1;
-	int max2 = -1;
-	while (number > 0) {
-		int max = number % 10;
-		if (max > max1) {
-			max2 = max1;
-			max1 = max;
-		}
-		else if (max > max2 and max < max1)
+	int n;
+	int max3 = 0, max1 = -1, max2 = -1;
+	int	number2 = number; // 2 chikl
+    while (number > 0) {
+		max3++;
+		int chif = (number % 10);
+		if (chif > max1) 
 		{
-			max2 = max;
+			max1 = chif;
+			n = max3;
 		}
-
 		number /= 10;
 	}
-	return max2; // right
-
-
+	max3 = 0; // dlya 2 chikla
+	while (number2 > 0) {
+		max3++;
+		int chif = (number2 % 10);
+		if (chif > max2 and max3 != n) 
+		{ 
+			max2 = chif; 
+		}
+		number2 /= 10;
+	}
+	return max2;
 }
 int itc_second_simple_max_num(long long number) {
 	if (number < 0) { number *= -1; }
